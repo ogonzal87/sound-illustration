@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#box1 {
+    width: 100vw;
+    height: 100vh;
+    background: red;
+    opacity: 0;
+}
+
+#box2 {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    background: green;
+    opacity: 0;
+}
+
+#box3 {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 30%;
+    right: 20%;
+    background: purple;
+    opacity: 0;
+}
+
+canvas {
+    display: none;
+}
