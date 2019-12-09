@@ -16,7 +16,6 @@ body {
 h1 {
     color: white;
     font-size: 200px;
-    filter: drop-shadow(8px, 16px rgb(0, 0, 0));
 }
 
 #layer1 {
@@ -24,41 +23,41 @@ h1 {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    animation: flares-animation 3s infinite ease-in-out;
+    animation: flares-animation 3s infinite ease-in-out alternate-reverse both;
 }
-
 #layer2 {
     opacity: 0;
     position: absolute;
     width: 100vw;
     height: 100vh;
+    animation: leafs1-animation 20s infinite ease-in-out alternate-reverse both;
 }
-
 #layer3 {
     opacity: 0;
     position: absolute;
     width: 100vw;
     height: 100vh;
 }
-
 #layer4 {
     opacity: 0;
     position: absolute;
     width: 100vw;
     height: 100vh;
+    animation: leafs1-animation 22s infinite ease-in-out alternate-reverse both;
 }
-
 #layer5 {
     opacity: 0;
     position: absolute;
     width: 100vw;
     height: 100vh;
+    animation: leafs1-animation 22s infinite ease-in-out alternate-reverse both;
 }
 #layer6 {
     opacity: 0;
     position: absolute;
     width: 100vw;
     height: 100vh;
+    animation: leafs1-animation 25s infinite ease-in-out alternate-reverse both;
 }
 #layer7 {
     opacity: 0;
@@ -71,6 +70,7 @@ h1 {
     position: absolute;
     width: 100vw;
     height: 100vh;
+    animation: leafs1-animation 22s infinite ease-in-out alternate-reverse both;
 }
 #layer9 {
     opacity: 0;
@@ -91,11 +91,39 @@ canvas {
 
 
 @keyframes flares-animation {
-    10% {
-        transform: scale(0.95);
+    0% {
+      -webkit-transform: scale(0.98) rotate(2deg);
+              transform: scale(0.98) rotate(2deg);
+      -webkit-transform-origin: 50% 0%;
+              transform-origin: 50% 0%;
     }
-
     100% {
-        transform: scale(1)
+      -webkit-transform: scale(1) rotate(-2deg);
+              transform: scale(1) rotate(-2deg);
+      -webkit-transform-origin: 50% 0%;
+              transform-origin: 50% 0%;
+    }
+}
+
+  @keyframes leafs1-animation {
+    0%,
+    100% {
+      transform: translateX(0%);
+      transform-origin: 50% 50%;
+    }
+    15% {
+      transform: translateX(-3px) rotate(-0.5deg);
+    }
+    30% {
+      transform: translateX(5px) rotate(.5deg);
+    }
+    45% {
+      transform: translateX(-1px) rotate(-0.6deg);
+    }
+    60% {
+      transform: translateX(3px) rotate(0.4deg);
+    }
+    75% {
+      transform: translateX(-2px) rotate(-0.2deg);
     }
   }
