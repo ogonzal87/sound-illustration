@@ -14,8 +14,6 @@ function setup() {
     mic.start();
 }
 
-console.log(initialMessage)
-
 function draw() {
     micLevel = mic.getLevel();
 
@@ -42,3 +40,11 @@ function draw() {
         clouds.style.opacity = 0;
     }
 }
+
+document.getElementsByTagName('body')[0].addEventListener('mouseover', function () {
+    getAudioContext().resume()
+});
+
+document.getElementsByClassName('container')[0].addEventListener('mouseover', function () {
+    getAudioContext().resume()
+});
