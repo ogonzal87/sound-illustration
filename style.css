@@ -14,8 +14,8 @@ body {
 .container {
     transition: all 5s ease-in-out;
     background-color: #01010b;
-    width: calc(100vw - 500px);
-    height: calc(100vh - 150px);
+    width: calc(100vw - 640px);
+    height: calc(100vh - 180px);
     position: relative;
     border: #3D09FE 16px solid;
     border-radius: 8px;
@@ -31,6 +31,14 @@ body {
     0 127px 96px rgba(0, 0, 0, 0.07);
 }
 
+.container:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: (3 / 4) * 100%;
+  }
+
+
 @media only screen and (max-width: 600px) {
     .container {
         width: 100vw;
@@ -42,6 +50,14 @@ h1 {
     color: white;
     font-size: 5vw;
     position: fixed;
+    background: rgba(255, 255, 255, .15);
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .1);
 }
 
 #layer1 {
